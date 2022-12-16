@@ -4,6 +4,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import javax.inject.Qualifier
 
 
 @InstallIn(SingletonComponent::class)
@@ -12,8 +13,13 @@ class DIModule {
 
 
     @Provides
-    fun providePiston():Piston{
-        return Piston()
+    fun providesNumberOfPiston(): NumberOfPiston {
+        return NumberOfPistonImpl()
+    }
+
+    @Provides
+    fun providePiston(numberOfPiston: NumberOfPiston): Piston {
+        return Piston(numberOfPiston)
     }
 
     @Provides
@@ -22,7 +28,30 @@ class DIModule {
     }
 
     @Provides
-    fun provideCar(engine: Engine): Car {
-        return Car(engine)
+    fun provideCar(engine: Engine, @SIX number: Int): Car {
+        return Car(engine, number)
     }
+
+    @Provides
+    @FOUR
+    fun provideFourNumber(): Int {
+        return 4
+    }
+
+    @Provides
+    @SIX
+    fun provideSixNumber(): Int {
+        return 6
+    }
+
+
 }
+
+@Qualifier
+@Retention(AnnotationRetention.BINARY)
+annotation class FOUR
+
+
+@Qualifier
+@Retention(AnnotationRetention.BINARY)
+annotation class SIX

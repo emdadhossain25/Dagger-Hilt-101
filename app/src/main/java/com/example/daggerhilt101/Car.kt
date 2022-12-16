@@ -3,10 +3,10 @@ package com.example.daggerhilt101
 import android.util.Log
 import javax.inject.Inject
 
-class Car @Inject constructor(val engine: Engine) {
+class Car @Inject constructor(val engine: Engine, val number: Int) {
 
-    fun startCar(){
+    fun startCar() {
         engine.startEngine()
-        Log.d("TAG", "startCar")
+        Log.d("TAG", "${number} startCar")
     }
 }
