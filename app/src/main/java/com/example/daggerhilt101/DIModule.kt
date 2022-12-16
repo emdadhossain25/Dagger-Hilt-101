@@ -1,5 +1,6 @@
 package com.example.daggerhilt101
 
+import com.example.daggerhilt101.repository.MyRepo
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -30,6 +31,13 @@ class DIModule {
     @Provides
     fun provideCar(engine: Engine, @SIX number: Int): Car {
         return Car(engine, number)
+    }
+
+
+
+    @Provides
+    fun provideMyRepo(car: Car):MyRepo{
+        return MyRepo(car)
     }
 
     @Provides

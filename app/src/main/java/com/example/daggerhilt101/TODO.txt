@@ -25,9 +25,14 @@ TODO 11. Create a constructor injector for engine in Car class [x]
 TODO 12. Create a class Piston [x]
 TODO 13. Create a provide annotation method for Piston [x]
 TODO 14. Create a constructor injector for piston in Engine class , call the piston[x]
-TODO 15. Create a package name repository (is a data source from remote or local) [x] later used in TODO 20
+TODO 15. Create a package name repository (is a data source from remote or local) [x] later used in TODO 21
 TODO 16. create an interface, NumberOfPiston with a method definition [x]
 TODO 17. create an implementation, NumberOfPistonImpl which implement NumberOfPiston [x]
 TODO 18. create provide method of NumberOfPiston interface return NumberOfPistonImpl [x]
 TODO 19. constructor inject NumberOfPiston inside Piston class .[x]
 TODO 20. add a int variable number in Car constructor injection [x]
+TODO 21. create a viewmodel class extending hiltviewmodel annotation [x]
+TODO 22. create a repository class which will contain business logic and provided by hiltmodule[x]
+TODO 23. integrate viewmodels delegate for creating viewmodel inside activity [x]
+TODO 24. remove car.startcar(). call from viewmodel.car.startCar()[x]
+

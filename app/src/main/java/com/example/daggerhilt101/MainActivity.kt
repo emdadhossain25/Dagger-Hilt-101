@@ -2,6 +2,8 @@ package com.example.daggerhilt101
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.activity.viewModels
+import com.example.daggerhilt101.repository.MyViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -11,6 +13,8 @@ class MainActivity : AppCompatActivity() {
     @Inject
     lateinit var car: Car
 
+    val myViewModel:MyViewModel by viewModels()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -19,6 +23,8 @@ class MainActivity : AppCompatActivity() {
         // and when car is being made engine or any other parts are fitted not created
 //        val engine = Engine()
 //        val car = Car(engine)
-        car.startCar()
+//        car.startCar()
+        myViewModel.startCar()
     }
+
 }
