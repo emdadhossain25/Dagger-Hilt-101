@@ -1,0 +1,28 @@
+initial setup
+-------------------
+TODO 00 add library dependency, create application class annotate with HiltAndroid App [x]
+TODO 01 add name in AndroidManifest.xml[x]
+TODO 02 add AndroidEntryPoint Annotation in MainActivity[x]
+
+
+without hilt
+---------------------
+TODO 1. create a Car class [x]
+TODO 2. create an Engine class [x]
+TODO 3. Create a constructor parameter [x] in Car class of type engine
+TODO 4. create a method in Car class logd [x]
+TODO 5. create a method in Engine class logd [x], and call the method in Car class
+TODO 6. Create instances of Car and Engine in MainActivity Class [x] run the app
+
+
+with hilt
+-----------------
+TODO 7. Create a Module class with singleton and Module annotation [x]
+TODO 8. create a provide annotation method for engine [x]
+TODO 9. Create a provide annotation method for Car [x]
+TODO 10 . Create a field injector for car in MainActivity [x]
+TODO 11. Create a constructor injector for engine in Car class [x]
+TODO 12. Create a class Piston [x]
+TODO 13. Create a provide annotation method for Piston [x]
+TODO 14. Create a constructor injector for piston in Engine class , call the piston[x]
+TODO 15. Create a package name repository (is a data source from remote or local) [x]
